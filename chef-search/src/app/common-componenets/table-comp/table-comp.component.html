@@ -1,0 +1,34 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">#</th>
+      <th scope="col">CookId</th>
+      <th scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="noOfRowsInTable > 0 else elseblk">
+        
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+      </tr>
+
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+      </tr>
+    </ng-container>
+
+    <ng-template #elseblk>
+      <tr class="table-danger">
+        <td colspan="3" class="text-center">
+          No Data Available
+        </td>
+      </tr>
+    </ng-template>
+
+  </tbody>
+</table>
